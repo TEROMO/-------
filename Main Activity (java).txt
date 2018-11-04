@@ -1,0 +1,68 @@
+package com.example.myapplication;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import static java.lang.Math.pow;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void onButtonClick(View v) {
+        EditText num1 = (EditText) findViewById(R.id.Num1);
+        EditText num2 = (EditText) findViewById(R.id.Num2);
+        TextView resText = (TextView) findViewById(R.id.Result);
+
+        int number1 = Integer.parseInt(num1.getText().toString());
+        int number2 = Integer.parseInt(num2.getText().toString());
+        int resSum = number1 + number2;
+
+        resText.setText(Integer.toString(resSum));
+    }
+
+    public void onButtonClickMinus(View b) {
+        EditText num1 = (EditText) findViewById(R.id.Num1);
+        EditText num2 = (EditText) findViewById(R.id.Num2);
+        TextView resText1 = (TextView) findViewById(R.id.Result);
+
+        int number1 = Integer.parseInt(num1.getText().toString());
+        int number2 = Integer.parseInt(num2.getText().toString());
+        int resraznost = number1 - number2;
+
+        resText1.setText(Integer.toString(resraznost));
+    }
+
+    public void onButtonClickYmnogenie(View c) {
+        EditText num1 = (EditText) findViewById(R.id.Num1);
+        EditText num2 = (EditText) findViewById(R.id.Num2);
+        TextView resText2 = (TextView) findViewById(R.id.Result);
+
+        int number1 = Integer.parseInt(num1.getText().toString());
+        int number2 = Integer.parseInt(num2.getText().toString());
+        int resYmn = number1 * number2;
+
+        resText2.setText(Integer.toString(resYmn));
+    }
+
+    public void onButtonClickDelenie(View a) {
+        EditText num1 = (EditText) findViewById(R.id.Num1);
+        EditText num2 = (EditText) findViewById(R.id.Num2);
+        TextView resText3 = (TextView) findViewById(R.id.Result);
+
+        int number1 = Integer.parseInt(num1.getText().toString());
+        int number2 = Integer.parseInt(num2.getText().toString());
+        int resDel = number1 / number2;
+
+        resText3.setText(Integer.toString(resDel));
+    }
+
+
+
+}
